@@ -44,7 +44,7 @@ async function loadCharacter(index) {
 }
 
 function getRandomCharacter() {
-    return Math.floor(Math.random() * 100) + 1;  // Adjusted to a reasonable range for demo
+    return Math.floor(Math.random() * 100) + 1;
 }
 
 let currentIndex = 1;
