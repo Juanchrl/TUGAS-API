@@ -1,0 +1,70 @@
+    body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        max-width: 600px;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        height: auto;
+        margin-top: 5vh;
+    }
+
+    .content {
+        margin-bottom: 20px;
+    }
+
+    .character-image {
+        width: 100%;  /* Ensures the image takes up the full width of its container */
+        max-height: 300px; /* Sets a maximum height to ensure consistency */
+        object-fit: contain; /* Scales the image to fit the container while preserving aspect ratio */
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        position: sticky;
+    }
+
+    .nav-button {
+        font-size: 1.5rem;
+        cursor: pointer;
+        user-select: none;
+        padding: 10px 20px;
+        background-color: #ffffffc6;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin : 30px;
+    }
+
+    .nav-button:hover {
+        background-color: #0056b3;
+    }
+
+    #loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        width: 120px; 
+        height: 120px;
+    }
+    

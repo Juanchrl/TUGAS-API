@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Naruto Character Viewer</title>
+</head>
+<body>
+    <div class="nav-buttons" id="nav-buttons">
+        <button id="left" class="nav-button"><i class='bx bxs-left-arrow'></i></button>
+    </div>
+    <div class="container">
+        <div class="content" id="content"></div>
+    </div>
+    <img id="loading" src="assets/loading.gif" alt="Loading..." style="border-radius: 50%;">
+    <div class="nav-buttons" id="nav-buttons">
+        <button id="right" class="nav-button"><i class='bx bxs-right-arrow' ></i></button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script id="character" type="text/x-handlebars-template">
+        <h1>{{name}}</h1>
+        <img src="{{image}}" alt="{{name}}" class="character-image">
+        <p><strong>ID:</strong> {{id}}</p>
+        <p><strong>Debut:</strong> {{debut.anime}}</p>
+        <p><strong>Classification:</strong> {{classification}}</p>
+        <p><strong>Occupation:</strong> {{occupation}}</p>
+        <p><strong>Affiliation:</strong> {{#each affiliation}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+        <p><strong>Jutsu:</strong> {{#each jutsu}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+    </script>
+
+    <script src="script.js"></script>
